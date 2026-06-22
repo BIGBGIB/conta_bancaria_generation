@@ -2,6 +2,7 @@ package conta_bancaria;
 
 import java.util.Scanner;
 
+import conta_bancaria.model.Conta;
 import conta_bancaria.util.Cores;
 import conta_bancaria.util.Sobre;
 
@@ -11,7 +12,22 @@ public class Menu {
 		Scanner leia = new Scanner(System.in);
 
 		int opcao;
-
+		
+		/* Instanciar Objetos da Classe Conta */
+		
+		Conta c1 = new Conta(1, 770, 1, "Gabrielle", 1000.00f);
+		c1.visualizar();
+		Conta c2 = new Conta(2, 771, 2, "Ricardo", 1000.00f);
+		c2.visualizar();
+		Conta c3 = new Conta(3, 773, 3, "Boberto", 1000.00f);
+		c3.visualizar();
+		
+		System.out.println("\nSacar R$ 1.000,00 da conta c2: " + (c2.sacar(1000.00f) ? 
+				"Saque efetuado com sucesso!" : "Saldo insuficiente!"));
+		c2.visualizar();
+		System.out.println("\nDepositar R$ 2.000,00 na conta c2");
+		c2.depositar(2000.00f);
+		c2.visualizar();
 		while (true) {
 
 			System.out.println(Cores.TEXT_WHITE + Cores.ANSI_PURPLE_BACKGROUND
