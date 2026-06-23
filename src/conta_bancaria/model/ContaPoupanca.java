@@ -1,0 +1,32 @@
+package conta_bancaria.model;
+
+public class ContaPoupanca extends Conta {
+
+	int diaAniversario;
+
+	public ContaPoupanca(int numero, int agencia, int tipo, String titular, float saldo, int diaAniversario) {
+		super(numero, agencia, tipo, titular, saldo);
+		this.diaAniversario = diaAniversario;
+	}
+	
+	
+	
+	public int getDiaAniversario() {
+		return diaAniversario;
+	}
+
+
+
+	public void setDiaAniversario(int diaAniversario) {
+		this.diaAniversario = diaAniversario;
+	}
+
+
+
+	@Override
+	public void visualizar() {
+		super.visualizar();
+		System.out.printf("Dia do aniversário: %d%n", this.diaAniversario);
+	}
+	
+}

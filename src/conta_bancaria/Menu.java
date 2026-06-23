@@ -3,6 +3,8 @@ package conta_bancaria;
 import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
+import conta_bancaria.model.ContaCorrente;
+import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
 import conta_bancaria.util.Sobre;
 
@@ -28,6 +30,23 @@ public class Menu {
 		System.out.println("\nDepositar R$ 2.000,00 na conta c2");
 		c2.depositar(2000.00f);
 		c2.visualizar();
+		
+		ContaCorrente cc1 = new ContaCorrente (4, 789, 1, "Raquel", 3000.00F, 2000.00f);
+		cc1.visualizar();
+		System.out.println("\nSacar R$ 3.500,00 da conta cc1: " + (cc1.sacar(3500.00f) ? 
+				"Saque efetuado com sucesso!" : "Saldo insuficiente!"));
+		cc1.visualizar();
+		System.out.println("\nSacar R$ 5.500,00 da conta cc1: " + (cc1.sacar(5500.00f) ? 
+				"Saque efetuado com sucesso!" : "Saldo insuficiente!"));
+		cc1.visualizar();
+		
+		System.out.println("\nDepositar R$ 2.000,00 na conta cc1");
+		cc1.depositar(2000.00f);
+		cc1.visualizar();
+		
+		ContaPoupanca cp1 = new ContaPoupanca (5, 790, 2, "Claudete", 3000.00F, 7);
+		cp1.visualizar();
+		
 		while (true) {
 
 			System.out.println(Cores.TEXT_WHITE + Cores.ANSI_PURPLE_BACKGROUND
