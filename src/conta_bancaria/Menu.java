@@ -2,50 +2,20 @@ package conta_bancaria;
 
 import java.util.Scanner;
 
-import conta_bancaria.model.Conta;
+import conta_bancaria.controller.ContaController;
 import conta_bancaria.model.ContaCorrente;
 import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
 import conta_bancaria.util.Sobre;
 
 public class Menu {
+	
+	private static final Scanner leia = new Scanner(System.in);
+	private static final ContaController contaController = new ContaController();
+	
 	public static void main(String[] args) {
 
-		Scanner leia = new Scanner(System.in);
-
 		int opcao;
-		
-		/* Instanciar Objetos da Classe Conta */
-		
-		Conta c1 = new Conta(1, 770, 1, "Gabrielle", 1000.00f);
-		c1.visualizar();
-		Conta c2 = new Conta(2, 771, 2, "Ricardo", 1000.00f);
-		c2.visualizar();
-		Conta c3 = new Conta(3, 773, 3, "Boberto", 1000.00f);
-		c3.visualizar();
-		
-		System.out.println("\nSacar R$ 1.000,00 da conta c2: " + (c2.sacar(1000.00f) ? 
-				"Saque efetuado com sucesso!" : "Saldo insuficiente!"));
-		c2.visualizar();
-		System.out.println("\nDepositar R$ 2.000,00 na conta c2");
-		c2.depositar(2000.00f);
-		c2.visualizar();
-		
-		ContaCorrente cc1 = new ContaCorrente (4, 789, 1, "Raquel", 3000.00F, 2000.00f);
-		cc1.visualizar();
-		System.out.println("\nSacar R$ 3.500,00 da conta cc1: " + (cc1.sacar(3500.00f) ? 
-				"Saque efetuado com sucesso!" : "Saldo insuficiente!"));
-		cc1.visualizar();
-		System.out.println("\nSacar R$ 5.500,00 da conta cc1: " + (cc1.sacar(5500.00f) ? 
-				"Saque efetuado com sucesso!" : "Saldo insuficiente!"));
-		cc1.visualizar();
-		
-		System.out.println("\nDepositar R$ 2.000,00 na conta cc1");
-		cc1.depositar(2000.00f);
-		cc1.visualizar();
-		
-		ContaPoupanca cp1 = new ContaPoupanca (5, 790, 2, "Claudete", 3000.00F, 7);
-		cp1.visualizar();
 		
 		while (true) {
 
@@ -82,9 +52,11 @@ public class Menu {
 
 			case 1:
 				System.out.println(Cores.TEXT_PURPLE_BRIGHT + "Criar Conta");
+				criarContasTeste();
 				break;
 			case 2:
 				System.out.println(Cores.TEXT_PURPLE_BRIGHT + "Todas as contas cadastradas: ");
+				listarContas();
 				break;
 			case 3:
 				System.out.println(Cores.TEXT_PURPLE_BRIGHT + "Digite o número da conta que deseja buscar: ");
@@ -109,7 +81,17 @@ public class Menu {
 				break;
 			}
 
-		}
-
 	}
+}
+
+	public static void criarContasTeste() {
+		contaController.cadastrar(new ContaCorrente(contaController.gerarNumero(), 456, 1, "Thuany Silva", 1000000.00f, 100000.00f));
+		contaController.cadastrar(new ContaPoupanca(contaController.gerarNumero(), 456, 2, "Marcia Condarco", 1000000.00f, 10));
+}
+	
+	public static void listarContas() {
+		contaController.listarTodas();
+	}
+
+	
 }
