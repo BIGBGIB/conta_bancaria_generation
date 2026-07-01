@@ -7,17 +7,17 @@
 &#x20;
 
 <div align="center">
-<img src="https://img.shields.io/github/languages/top/BIGBGIB/conta_bancaria_generation?style=flat-square" />
+<img src="https://img.shields.io/github/languages/top/BIGBGIB/GBank?style=flat-square" />
 
-<img src="https://img.shields.io/github/repo-size/BIGBGIB/conta_bancaria_generation?style=flat-square" />
+<img src="https://img.shields.io/github/repo-size/BIGBGIB/GBank?style=flat-square" />
 
 <img src="https://img.shields.io/github/languages/count/BIGBGIB/conta_bancaria_generation?style=flat-square" />
 
-<img src="https://img.shields.io/github/last-commit/BIGBGIB/conta_bancaria_generation?style=flat-square" />
+<img src="https://img.shields.io/github/last-commit/BIGBGIB/GBank?style=flat-square" />
 
 <img src="https://img.shields.io/github/issues/BIGBGIB/conta_bancaria_generation?style=flat-square" />
 
-<img src="https://img.shields.io/github/issues-pr/BIGBGIB/conta_bancaria_generation?style=flat-square" />
+<img src="https://img.shields.io/github/issues-pr/BIGBGIB/GBank?style=flat-square" />
 
 <img src="https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen" alt="Status: Concluído">
 
@@ -270,13 +270,13 @@ Para executar os códigos localmente, você precisará de:
 
 &#x20;
 
-1\. Clone o repositório do Projeto \[Conta Bancária]([BIGBGIB/conta_bancaria_generation](https://github.com/BIGBGIB/conta_bancaria_generation)) dentro da pasta do \*Workspace\* do Eclipse/STS
+1\. Clone o repositório do Projeto \[Conta Bancária]([https://github.com/BIGBGIB/GBank](https://github.com/BIGBGIB/GBank)) dentro da pasta do \*Workspace\* do Eclipse/STS
 
 &#x20;
 
 ```bash
 
-git clone https://github.com/BIGBGIB/conta_bancaria_generation.git
+git clone https://github.com/BIGBGIB/GBank
 
 ```
 
@@ -352,7 +352,7 @@ Este repositório é parte de um projeto educacional, mas contribuições são s
 
 &#x20;
 
-Desenvolvido por \[\*\*Gabrielle\*\*]([BIGBGIB/conta_bancaria_generation](https://github.com/BIGBGIB/conta_bancaria_generation))
+Desenvolvido por \[\*\*Gabrielle\*\*]([[BIGBGIB/GBank](https://github.com/BIGBGIB/GBank))
 
 Para dúvidas, sugestões ou colaborações, entre em contato via GitHub ou abra uma issue!
 
